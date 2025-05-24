@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import LoginButton from "@/components/login-button";
 import { Button } from "@/components/ui/button";
+import FAQ from "@/components/faq";
 
 export default function Home() {
   return (
@@ -44,7 +45,7 @@ export default function Home() {
           </Button>
         </Link>
       </div>
-      <div className="max-w-7xl mx-auto my-10">
+      <div className="max-w-7xl mx-auto my-10 p-4">
         <div className="max-w-[545px] mx-auto flex justify-center items-center flex-wrap gap-4">
           <Image
             src="/img1.svg"
@@ -92,6 +93,17 @@ export default function Home() {
         <p className="my-3 text-[15px] text-[#545454] text-center">
           Generated images from imagify
         </p>
+      </div>
+      <div className="my-10 md:my-20 max-w-7xl mx-auto">
+        <h2 className="text-center font-[500] text-[40px] max-sm:text-[20px] leading-[80px] max-sm:leading-[40px]">
+          How it works
+        </h2>
+        <p className="text-center text-[#797484]">
+          Transform Words Into Stunning Images
+        </p>
+      </div>
+      <div className="my-5 sm:my-10 max-w-7xl mx-auto">
+        <FAQ />
       </div>
     </section>
   );
