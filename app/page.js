@@ -46,7 +46,7 @@ export default function Home() {
         </Link>
       </section>
       <section className="max-w-7xl mx-auto my-10 p-4">
-        <div className="max-w-[545px] mx-auto flex justify-center items-center flex-wrap gap-4">
+        <div className="max-w-[560px] mx-auto flex justify-center items-center flex-wrap gap-4">
           <Image
             src="/img1.svg"
             height={78}
@@ -104,6 +104,42 @@ export default function Home() {
       </section>
       <section className="my-5 sm:my-10 max-w-7xl mx-auto">
         <FAQ />
+      </section>
+      <section className="max-w-7xl mx-auto my-10 p-4">
+        <h2 className="text-center font-[500] text-[40px] max-sm:text-[20px] leading-[80px] max-sm:leading-[40px]">
+          Create AI Images
+        </h2>
+        <p className="text-center text-[#797484]">
+          Turn your imagination into visuals
+        </p>
+        <div className="flex flex-col sm:flex-row my-5 sm:my-20 gap-6 sm:gap-x-10 justify-center items-center">
+          <Image
+            src="/banner.svg"
+            height={393}
+            width={393}
+            alt="banner photo"
+            className="rounded-[6px]"
+          />
+          <div className="flex flex-col gap-y-6">
+            <h3 className="font-[500] text-[28px] leading-[38px] text-center sm:text-start">
+              Introducing the AI-Powered Text to <br /> Image Generator
+            </h3>
+            <p className="leading-[22px] text-[#797484] max-w-[550px]">
+              Easily bring your ideas to life with our free AI image generator.
+              Whether you need stunning visuals or unique imagery, our tool
+              transforms your text into eye-catching images with just a few
+              clicks. Imagine it, describe it, and watch it come to life
+              instantly.
+            </p>
+            <p className="leading-[22px] text-[#797484] max-w-[550px]">
+              Simply type in a text prompt, and our cutting-edge AI will
+              generate high-quality images in seconds. From product visuals to
+              character designs and portraits, even concepts that don’t yet
+              exist can be visualized effortlessly. Powered by advanced AI
+              technology, the creative possibilities are limitless!
+            </p>
+          </div>
+        </div>
       </section>
     </section>
   );
