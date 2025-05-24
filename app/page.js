@@ -27,11 +27,11 @@ export default function Home() {
             Best text to image generator 💫
           </p>
         </div>
-        <p className="my-7 text-[80px] text-center leading-[80px]">
+        <p className="my-7 text-[80px] max-sm:text-[40px] text-center leading-[80px] max-sm:leading-[40px]">
           Turn text to <br /> <span className="text-[#007aff]">image</span>, in
           seconds
         </p>
-        <p className="my-5 text-center text-[18px] text-[#545454] max-w-[576px] mx-auto">
+        <p className="my-5 text-center max-sm:text-sm text-[18px] text-[#545454] max-w-[576px] mx-auto">
           Unleash your creativity with AI. Turn your imagination into visual art
           in seconds - just type, and watch the magic happen.
         </p>
@@ -43,6 +43,55 @@ export default function Home() {
             Generate Images ✨
           </Button>
         </Link>
+      </div>
+      <div className="max-w-7xl mx-auto my-10">
+        <div className="max-w-[545px] mx-auto flex justify-center items-center flex-wrap gap-4">
+          <Image
+            src="/img1.svg"
+            height={78}
+            width={78}
+            alt="previously generated images"
+            className="rounded-[6px]"
+          />
+          <Image
+            src="/img2.svg"
+            height={78}
+            width={78}
+            alt="previously generated images"
+            className="rounded-[6px]"
+          />
+          <Image
+            src="/img1.svg"
+            height={78}
+            width={78}
+            alt="previously generated images"
+            className="rounded-[6px]"
+          />
+          <Image
+            src="/img2.svg"
+            height={78}
+            width={78}
+            alt="previously generated images"
+            className="rounded-[6px]"
+          />
+          <Image
+            src="/img1.svg"
+            height={78}
+            width={78}
+            alt="previously generated images"
+            className="rounded-[6px]"
+          />
+          <Image
+            src="/img2.svg"
+            height={78}
+            width={78}
+            alt="previously generated images"
+            className="rounded-[6px]"
+          />
+        </div>
+        <p className="my-3 text-[15px] text-[#545454] text-center">
+          Generated images from imagify
+        </p>
       </div>
     </section>
   );
