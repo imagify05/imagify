@@ -1,6 +1,7 @@
 import { Outfit } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
             }}
           >
             {children}
+            <Toaster />
           </main>
         </body>
       </html>
