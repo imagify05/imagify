@@ -124,17 +124,17 @@ export default function Home() {
             <h3 className="font-[500] text-[28px] leading-[38px] text-center sm:text-start">
               Introducing the AI-Powered Text to <br /> Image Generator
             </h3>
-            <p className="leading-[22px] text-[#797484] max-w-[550px]">
+            <p className="leading-[22px] text-[#797484] max-w-[550px] text-center sm:text-start">
               Easily bring your ideas to life with our free AI image generator.
               Whether you need stunning visuals or unique imagery, our tool
               transforms your text into eye-catching images with just a few
               clicks. Imagine it, describe it, and watch it come to life
               instantly.
             </p>
-            <p className="leading-[22px] text-[#797484] max-w-[550px]">
+            <p className="leading-[22px] text-[#797484] max-w-[550px] text-center sm:text-start">
               Simply type in a text prompt, and our cutting-edge AI will
               generate high-quality images in seconds. From product visuals to
-              character designs and portraits, even concepts that don’t yet
+              character designs and portraits, even concepts that don't yet
               exist can be visualized effortlessly. Powered by advanced AI
               technology, the creative possibilities are limitless!
             </p>
