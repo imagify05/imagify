@@ -1,4 +1,5 @@
 import { Outfit } from "next/font/google";
+import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -13,20 +14,22 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${outfit.className} antialiased`}>
-        <main
-          style={{
-            background: "linear-gradient(180deg, #F2FFF9 0%, #FFF6F1 100%)",
-            height: "100dvh",
-            maxWidth: "100dvw",
-            overflowX: "hidden",
-            position: "relative",
-          }}
-        >
-          {children}
-        </main>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={`${outfit.className} antialiased`}>
+          <main
+            style={{
+              background: "linear-gradient(180deg, #F2FFF9 0%, #FFF6F1 100%)",
+              height: "100dvh",
+              maxWidth: "100dvw",
+              overflowX: "hidden",
+              position: "relative",
+            }}
+          >
+            {children}
+          </main>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
