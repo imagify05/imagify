@@ -2,9 +2,37 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { UserButton, useUser } from "@clerk/nextjs";
+import { useEffect } from "react";
 
 export default function LoginButton() {
   const { isSignedIn, user } = useUser();
+
+  const createUser = async (userId) => {
+    try {
+      const response = await fetch("/api/create-user", {
+        method: "POST",
+        body: JSON.stringify({
+          user_id: userId,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      if (!response.ok) {
+        throw new Error(response.status, response.statusText);
+      } else {
+        const data = await response.json();
+        console.log(data.message);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    user?.id && createUser(user?.id);
+  }, [user?.id]);
+
   return (
     <div>
       {isSignedIn ? (
