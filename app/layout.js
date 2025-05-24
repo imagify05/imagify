@@ -27,8 +27,8 @@ export default function RootLayout({ children }) {
           <main
             style={{
               background: "linear-gradient(180deg, #F2FFF9 0%, #FFF6F1 100%)",
-              height: "100dvh",
-              maxWidth: "100dvw",
+              height: "100vh",
+              maxWidth: "100vw",
               overflowX: "hidden",
               position: "relative",
             }}
