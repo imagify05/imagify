@@ -94,7 +94,7 @@ export default function Home() {
           Generated images from imagify
         </p>
       </div>
-      <div className="my-10 md:my-20 max-w-7xl mx-auto">
+      <div className="my-10 mt-20 mb-15 max-w-7xl mx-auto">
         <h2 className="text-center font-[500] text-[40px] max-sm:text-[20px] leading-[80px] max-sm:leading-[40px]">
           How it works
         </h2>
