@@ -22,7 +22,7 @@ export default function Home() {
           <LoginButton />
         </div>
       </header>
-      <div className="my-10 max-w-7xl mx-auto p-4">
+      <section className="my-10 max-w-7xl mx-auto p-4">
         <div className="px-5 py-2 bg-white max-w-[273px] mx-auto rounded-[50px] flex justify-center items-center border-[0.3px] border-gray-300 animate-bounce">
           <p className="text-[15px] text-[#696969]">
             Best text to image generator 💫
@@ -44,8 +44,8 @@ export default function Home() {
             Generate Images ✨
           </Button>
         </Link>
-      </div>
-      <div className="max-w-7xl mx-auto my-10 p-4">
+      </section>
+      <section className="max-w-7xl mx-auto my-10 p-4">
         <div className="max-w-[545px] mx-auto flex justify-center items-center flex-wrap gap-4">
           <Image
             src="/img1.svg"
@@ -93,18 +93,18 @@ export default function Home() {
         <p className="my-3 text-[15px] text-[#545454] text-center">
           Generated images from imagify
         </p>
-      </div>
-      <div className="my-10 mt-20 mb-15 max-w-7xl mx-auto">
+      </section>
+      <section className="my-10 mt-20 mb-15 max-w-7xl mx-auto">
         <h2 className="text-center font-[500] text-[40px] max-sm:text-[20px] leading-[80px] max-sm:leading-[40px]">
           How it works
         </h2>
         <p className="text-center text-[#797484]">
           Transform Words Into Stunning Images
         </p>
-      </div>
-      <div className="my-5 sm:my-10 max-w-7xl mx-auto">
+      </section>
+      <section className="my-5 sm:my-10 max-w-7xl mx-auto">
         <FAQ />
-      </div>
+      </section>
     </section>
   );
 }
