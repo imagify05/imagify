@@ -15,7 +15,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${outfit.className} antialiased`}>
-        <main>{children}</main>
+        <main
+          style={{
+            background: "linear-gradient(180deg, #F2FFF9 0%, #FFF6F1 100%)",
+            height: "100dvh",
+            maxWidth: "100dvw",
+            overflowX: "hidden",
+            position: "relative",
+          }}
+        >
+          {children}
+        </main>
       </body>
     </html>
   );
