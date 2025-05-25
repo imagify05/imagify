@@ -2,13 +2,15 @@
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { useUser } from "@clerk/nextjs";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import Loading from "@/components/loading";
 import Image from "next/image";
 import { Download } from "lucide-react";
+import { CreditContext } from "@/utils/context/credit-context";
 
 export default function Dashboard() {
+  const { fetchCredits } = useContext(CreditContext);
   const { user } = useUser();
   const [prompt, setPrompt] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -37,6 +39,7 @@ export default function Dashboard() {
       const data = await response.json();
       const imageUrl = `data:image/png;base64,${data.message}`;
       setImage(imageUrl);
+      fetchCredits();
       setPrompt("");
     } catch (error) {
       console.error(error);
