@@ -10,6 +10,32 @@ export default function Navbar() {
   const { isSignedIn, user } = useUser();
   const value = useContext(CreditContext);
 
+  const createUser = async (userId) => {
+    try {
+      const response = await fetch("/api/create-user", {
+        method: "POST",
+        body: JSON.stringify({
+          user_id: userId,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      if (!response.ok) {
+        throw new Error(response.status, response.statusText);
+      } else {
+        const data = await response.json();
+        console.log(data.message);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    user?.id && createUser(user?.id);
+  }, [user?.id]);
+
   useEffect(() => {
     user?.id && value.fetchCredits();
   }, [user?.id]);
