@@ -176,20 +176,29 @@ export default function Home() {
           </p>
         </div>
         <div className="flex gap-x-1.5 items-center justify-center">
-          <div className="h-[35px] w-[35px] flex justify-center items-center rounded-full border-[0.5px] border-[#5e5e5e]">
+          <Link
+            href="/"
+            className="h-[35px] w-[35px] flex justify-center items-center rounded-full border-[0.5px] border-[#5e5e5e]"
+          >
             <Image
               src="/instagram.svg"
               height={15}
               width={15}
               alt="instagram logo"
             />
-          </div>
-          <div className="h-[35px] w-[35px] flex justify-center items-center rounded-full border-[0.5px] border-[#5e5e5e]">
+          </Link>
+          <Link
+            href="/"
+            className="h-[35px] w-[35px] flex justify-center items-center rounded-full border-[0.5px] border-[#5e5e5e]"
+          >
             <Image src="/gmail.svg" height={15} width={15} alt="gmail logo" />
-          </div>
-          <div className="h-[35px] w-[35px] flex justify-center items-center rounded-full border-[0.5px] border-[#5e5e5e]">
+          </Link>
+          <Link
+            href="/"
+            className="h-[35px] w-[35px] flex justify-center items-center rounded-full border-[0.5px] border-[#5e5e5e]"
+          >
             <Image src="/github.svg" height={15} width={15} alt="github logo" />
-          </div>
+          </Link>
         </div>
       </footer>
     </section>
