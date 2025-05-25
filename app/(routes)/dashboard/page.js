@@ -112,7 +112,7 @@ export default function Dashboard() {
                 <span>Generating with AI...</span>
               </div>
             ) : (
-              "Generate Images ✨"
+              "Generate Image ✨"
             )}
           </Button>
         </form>
