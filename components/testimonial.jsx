@@ -25,7 +25,7 @@ export default function TestimonialSection() {
           width={92}
         />
         <p className="text-[#797484] leading-[22px] text-center my-1">
-          ve been using imagify for nearly two years, primarily for Instagram,
+          have been using imagify for nearly two years, primarily for Instagram,
           and it has been incredibly user-friendly, making my work much easier.
         </p>
       </div>
@@ -51,16 +51,17 @@ export default function TestimonialSection() {
           width={92}
         />
         <p className="text-[#797484] leading-[22px] text-center my-1">
-          ve been using imagify for nearly two years, primarily for Instagram,
+          have been using imagify for nearly two years, primarily for Instagram,
           and it has been incredibly user-friendly, making my work much easier.
         </p>
       </div>
       <div className="flex flex-col gap-2 max-w-[322px] w-full min-h-[327px] items-center justify-center p-6 border rounded-[8px] border-[#e1e1e1] shadow-[0px_4px_15px_0px_#0000000D]">
         <Image
-          src="/profile_img_3.svg"
+          src="/profile_martin.svg"
           alt="avatar 3"
           height={42.4}
           width={42.4}
+          className="rounded-full"
         />
         <div className="flex flex-col items-center justify-center">
           <p className="font-[500] text-[18px] leading-[28px] text-[#4b445a]">
@@ -77,7 +78,7 @@ export default function TestimonialSection() {
           width={92}
         />
         <p className="text-[#797484] leading-[22px] text-center my-1">
-          ve been using imagify for nearly two years, primarily for Instagram,
+          have been using imagify for nearly two years, primarily for Instagram,
           and it has been incredibly user-friendly, making my work much easier.
         </p>
       </div>

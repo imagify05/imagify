@@ -49,42 +49,42 @@ export default function Home() {
       <section className="max-w-7xl mx-auto my-10 p-4">
         <div className="max-w-[560px] mx-auto flex justify-center items-center flex-wrap gap-4">
           <Image
-            src="/img1.svg"
+            src="https://ik.imagekit.io/txlfejzn5/ChatGPT%20Image%20May%2025,%202025,%2001_25_11%20PM.png?updatedAt=1748159729711"
             height={78}
             width={78}
             alt="previously generated images"
             className="rounded-[6px]"
           />
           <Image
-            src="/img2.svg"
+            src="https://ik.imagekit.io/txlfejzn5/downloaded-image.png?updatedAt=1748159538966"
             height={78}
             width={78}
             alt="previously generated images"
             className="rounded-[6px]"
           />
           <Image
-            src="/img1.svg"
+            src="https://ik.imagekit.io/txlfejzn5/WhatsApp%20Image%202025-05-25%20at%201.09.31%20PM%20(1).jpeg?updatedAt=1748158885544"
             height={78}
             width={78}
             alt="previously generated images"
             className="rounded-[6px]"
           />
           <Image
-            src="/img2.svg"
+            src="https://ik.imagekit.io/txlfejzn5/WhatsApp%20Image%202025-05-25%20at%201.09.32%20PM.jpeg?updatedAt=1748159478082"
             height={78}
             width={78}
             alt="previously generated images"
             className="rounded-[6px]"
           />
           <Image
-            src="/img1.svg"
+            src="https://ik.imagekit.io/txlfejzn5/WhatsApp%20Image%202025-05-25%20at%201.09.31%20PM.jpeg?updatedAt=1748158885367"
             height={78}
             width={78}
             alt="previously generated images"
             className="rounded-[6px]"
           />
           <Image
-            src="/img2.svg"
+            src="https://ik.imagekit.io/txlfejzn5/banner.svg?updatedAt=1748159272397"
             height={78}
             width={78}
             alt="previously generated images"
@@ -115,7 +115,7 @@ export default function Home() {
         </p>
         <div className="flex flex-col sm:flex-row my-5 sm:my-20 gap-6 sm:gap-x-10 justify-center items-center">
           <Image
-            src="/banner.svg"
+            src="https://ik.imagekit.io/txlfejzn5/ChatGPT%20Image%20May%2025,%202025,%2001_25_11%20PM.png?updatedAt=1748159729711"
             height={393}
             width={393}
             alt="banner photo"
