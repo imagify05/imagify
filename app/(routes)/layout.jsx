@@ -1,10 +1,13 @@
 import Navbar from "./_components/navbar";
+import CreditProvider from "@/utils/context/credit-context";
 
 export default function Layout({ children }) {
   return (
-    <section>
-      <Navbar />
-      {children}
-    </section>
+    <CreditProvider>
+      <section>
+        <Navbar />
+        {children}
+      </section>
+    </CreditProvider>
   );
 }
