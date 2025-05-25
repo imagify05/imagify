@@ -1,9 +1,9 @@
-export default function Loading({ fill, text }) {
+export default function Loading() {
   return (
     <div role="status">
       <svg
         aria-hidden="true"
-        className={`w-4 h-4 text-${text} animate-spin fill-${fill}`}
+        className="w-4 h-4 text-black animate-spin fill-white"
         viewBox="0 0 100 101"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

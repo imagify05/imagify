@@ -108,7 +108,7 @@ export default function Dashboard() {
           >
             {isLoading ? (
               <div className="flex justify-center items-center gap-x-2">
-                <Loading fill="white" text="black" />
+                <Loading />
                 <span>Generating with AI...</span>
               </div>
             ) : (
