@@ -35,13 +35,25 @@ export default function Dashboard() {
         throw new Error(response.status, response.statusText);
       }
       const data = await response.json();
-      setImage(data.image);
+      const imageUrl = `data:image/png;base64,${data.message}`;
+      setImage(imageUrl);
+      setPrompt("");
     } catch (error) {
       console.error(error);
       toast.error("Failed to generate image");
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const handleDownload = (imageData) => {
+    const imageUrl = imageData;
+    const link = document.createElement("a");
+    link.href = imageUrl;
+    link.download = "generated-image.png";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -56,7 +68,10 @@ export default function Dashboard() {
             src={image}
           />
           <div className="flex gap-x-6 justify-center items-center my-5">
-            <Button className="flex items-center justify-center gap-x-2">
+            <Button
+              className="flex items-center justify-center gap-x-2"
+              onClick={() => handleDownload(image)}
+            >
               Download <Download />
             </Button>
             <Button
