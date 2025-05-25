@@ -3,6 +3,7 @@ import Image from "next/image";
 import LoginButton from "@/components/login-button";
 import { Button } from "@/components/ui/button";
 import FAQ from "@/components/faq";
+import TestimonialSection from "@/components/testimonial";
 
 export default function Home() {
   return (
@@ -120,18 +121,18 @@ export default function Home() {
             alt="banner photo"
             className="rounded-[6px]"
           />
-          <div className="flex flex-col gap-y-6">
+          <div className="flex flex-col gap-y-6 p-2 sm:p-0">
             <h3 className="font-[500] text-[28px] leading-[38px] text-center sm:text-start">
               Introducing the AI-Powered Text to <br /> Image Generator
             </h3>
-            <p className="leading-[22px] text-[#797484] max-w-[550px] text-center sm:text-start">
+            <p className="leading-[22px] max-sm:text-sm text-[#797484] max-w-[550px] text-center sm:text-start">
               Easily bring your ideas to life with our free AI image generator.
               Whether you need stunning visuals or unique imagery, our tool
               transforms your text into eye-catching images with just a few
               clicks. Imagine it, describe it, and watch it come to life
               instantly.
             </p>
-            <p className="leading-[22px] text-[#797484] max-w-[550px] text-center sm:text-start">
+            <p className="leading-[22px] max-sm:text-sm text-[#797484] max-w-[550px] text-center sm:text-start">
               Simply type in a text prompt, and our cutting-edge AI will
               generate high-quality images in seconds. From product visuals to
               character designs and portraits, even concepts that don't yet
@@ -139,6 +140,15 @@ export default function Home() {
               technology, the creative possibilities are limitless!
             </p>
           </div>
+        </div>
+      </section>
+      <section className="max-w-7xl mx-auto my-10 p-4">
+        <h2 className="text-center font-[500] text-[40px] max-sm:text-[20px] leading-[80px] max-sm:leading-[40px]">
+          Customer testimonials
+        </h2>
+        <p className="text-center text-[#797484]">What Our Users Are Saying</p>
+        <div className="my-7">
+          <TestimonialSection />
         </div>
       </section>
     </section>
