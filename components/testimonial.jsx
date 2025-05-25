@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function TestimonialSection() {
   return (
-    <aside className="flex flex-wrap gap-x-6 justify-center items-center">
+    <aside className="flex flex-wrap gap-6 justify-center items-center">
       <div className="flex flex-col gap-2 max-w-[322px] w-full min-h-[327px] items-center justify-center p-6 border rounded-[8px] border-[#e1e1e1] shadow-[0px_4px_15px_0px_#0000000D]">
         <Image
           src="/profile_img_1.svg"

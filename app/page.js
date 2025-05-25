@@ -151,6 +151,47 @@ export default function Home() {
           <TestimonialSection />
         </div>
       </section>
+      <section className="max-w-7xl mx-auto my-10 p-4">
+        <h2 className="text-center font-[500] text-[40px] max-sm:text-[20px] leading-[80px] max-sm:leading-[40px]">
+          See the magic. Try now
+        </h2>
+        <Link
+          href="/dashboard"
+          className="w-full flex justify-center items-center my-5"
+        >
+          <Button className="w-[239px] h-[55px] rounded-[50px]">
+            Generate Images ✨
+          </Button>
+        </Link>
+      </section>
+      <footer className="mt-24 sm:mt-32 p-3 max-w-7xl mx-auto flex justify-between items-center">
+        <div className="flex justify-center items-center gap-x-6">
+          <div className="flex justify-center gap-x-2 items-center">
+            <Image src="/logo.svg" height={31} width={31} alt="logo-image" />
+            <p className="font-semibold text-[30px]">Imagify</p>
+          </div>
+          <div className="h-[30px] border border-[#9d9d9d] max-sm:hidden" />
+          <p className="text-[#797484] max-sm:hidden">
+            All right reserved. Copyright @imagify
+          </p>
+        </div>
+        <div className="flex gap-x-1.5 items-center justify-center">
+          <div className="h-[35px] w-[35px] flex justify-center items-center rounded-full border-[0.5px] border-[#5e5e5e]">
+            <Image
+              src="/instagram.svg"
+              height={15}
+              width={15}
+              alt="instagram logo"
+            />
+          </div>
+          <div className="h-[35px] w-[35px] flex justify-center items-center rounded-full border-[0.5px] border-[#5e5e5e]">
+            <Image src="/gmail.svg" height={15} width={15} alt="gmail logo" />
+          </div>
+          <div className="h-[35px] w-[35px] flex justify-center items-center rounded-full border-[0.5px] border-[#5e5e5e]">
+            <Image src="/github.svg" height={15} width={15} alt="github logo" />
+          </div>
+        </div>
+      </footer>
     </section>
   );
 }
