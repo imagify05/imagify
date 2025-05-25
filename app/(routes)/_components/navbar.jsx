@@ -26,6 +26,7 @@ export default function Navbar() {
       } else {
         const data = await response.json();
         console.log(data.message);
+        value.fetchCredits();
       }
     } catch (error) {
       console.error(error);
@@ -34,10 +35,6 @@ export default function Navbar() {
 
   useEffect(() => {
     user?.id && createUser(user?.id);
-  }, [user?.id]);
-
-  useEffect(() => {
-    user?.id && value.fetchCredits();
   }, [user?.id]);
 
   return (
