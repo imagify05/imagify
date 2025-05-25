@@ -42,10 +42,10 @@ export default function Navbar() {
 
   return (
     <header className="max-w-7xl mx-auto px-3 py-4 flex justify-between items-center gap-x-4">
-      <div className="flex justify-center gap-x-2 items-center">
+      <Link href="/" className="flex justify-center gap-x-2 items-center">
         <Image src="/logo.svg" height={31} width={31} alt="logo-image" />
         <p className="font-semibold text-[30px] max-sm:hidden">Imagify</p>
-      </div>
+      </Link>
       <div className="flex justify-center gap-x-4 items-center">
         {isSignedIn && (
           <div className="flex justify-center gap-x-2 px-5 py-3 items-center rounded-full bg-[#d7ebff]">
