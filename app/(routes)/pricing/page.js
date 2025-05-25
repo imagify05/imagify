@@ -10,7 +10,7 @@ export default function PricingPage() {
         <h1 className="text-[35px] max-sm:text-[20px] leading-[80px] text-center text-[#252525]">
           Choose the plan
         </h1>
-        <div className="flex flex-wrap gap-x-6 justify-center items-center">
+        <div>
           <PricingCard />
         </div>
       </div>
