@@ -68,7 +68,7 @@ export default function TestimonialSection() {
             James Washington
           </p>
           <span className="font-[500] text-[13px] leading-[28px] text-[#62577b]">
-            Co-Founded
+            Co-Founder
           </span>
         </div>
         <Image

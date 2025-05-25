@@ -115,7 +115,7 @@ export default function Home() {
         </p>
         <div className="flex flex-col sm:flex-row my-5 sm:my-20 gap-6 sm:gap-x-10 justify-center items-center">
           <Image
-            src="https://ik.imagekit.io/txlfejzn5/ChatGPT%20Image%20May%2025,%202025,%2001_25_11%20PM.png?updatedAt=1748159729711"
+            src="https://ik.imagekit.io/txlfejzn5/banner.svg?updatedAt=1748159272397"
             height={393}
             width={393}
             alt="banner photo"
