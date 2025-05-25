@@ -3,41 +3,15 @@ import { UserButton, useUser } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import toast from "react-hot-toast";
+import { useContext, useEffect } from "react";
+import { CreditContext } from "@/utils/context/credit-context";
 
 export default function Navbar() {
   const { isSignedIn, user } = useUser();
-  const [credits, setCredits] = useState(0);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const fetchCredits = async () => {
-    try {
-      setIsLoading(true);
-      const response = await fetch("/api/fetch-credits", {
-        method: "POST",
-        body: JSON.stringify({
-          user_id: user?.id || "",
-        }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      if (!response.ok) {
-        throw new Error(response.statusText, response.status);
-      }
-      const data = await response.json();
-      setCredits(data.credits);
-    } catch (error) {
-      console.error(error);
-      toast.error("Error to fetch credits");
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  const value = useContext(CreditContext);
 
   useEffect(() => {
-    user?.id && fetchCredits();
+    user?.id && value.fetchCredits();
   }, [user?.id]);
 
   return (
@@ -51,7 +25,9 @@ export default function Navbar() {
           <div className="flex justify-center gap-x-2 px-5 py-3 items-center rounded-full bg-[#d7ebff]">
             <Image src="/group.svg" alt="star icon" height={23} width={23} />
             <p className="text-[15px] leading-[28px] text-[#4a4a4a]">
-              {isLoading ? "Loading..." : `Credits left: ${credits}`}
+              {value.isLoading
+                ? "Loading..."
+                : `Credits left: ${value.credits}`}
             </p>
           </div>
         )}
