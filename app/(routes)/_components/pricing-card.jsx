@@ -28,8 +28,8 @@ const pricingData = [
 
 export default function PricingCard() {
   return (
-    <div className="my-5 flex flex-wrap gap-x-6 justify-center items-center">
-      {pricingData.map((item, index) => (
+    <div className="my-5 flex flex-wrap gap-6 justify-center items-center">
+      {pricingData.map((item) => (
         <div
           className="p-5 bg-white flex flex-col gap-y-7 border rounded-[10px] w-[333px]"
           key={item.id}
