@@ -63,6 +63,29 @@ export default function Subscription({ plan, price }) {
         theme: {
           color: "#3399c",
         },
+        modal: {
+          ondismiss: function () {
+            setIsProcessing(false);
+          },
+        },
+        config: {
+          display: {
+            blocks: {
+              banks: {
+                name: "Pay using UPI",
+                instruments: [
+                  {
+                    method: "upi",
+                  },
+                ],
+              },
+            },
+            sequence: ["block.banks"],
+            preferences: {
+              show_default_blocks: true,
+            },
+          },
+        },
       };
       const rzp1 = new window.Razorpay(options);
       rzp1.open();
