@@ -53,7 +53,7 @@ export default function PricingCard() {
               /{item.credits} credits
             </span>
           </div>
-          <Subscription plan={item.plan} />
+          <Subscription plan={item.plan} price={item.price} />
         </div>
       ))}
     </div>
