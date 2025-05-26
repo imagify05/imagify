@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
 import Subscription from "./subscription";
