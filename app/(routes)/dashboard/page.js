@@ -11,7 +11,11 @@ import { CreditContext } from "@/utils/context/credit-context";
 import Link from "next/link";
 
 export default function Dashboard() {
-  const { fetchCredits, credits } = useContext(CreditContext);
+  const {
+    fetchCredits,
+    credits,
+    isLoading: creditsLoading,
+  } = useContext(CreditContext);
   const { user } = useUser();
   const [prompt, setPrompt] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -87,6 +91,18 @@ export default function Dashboard() {
             </Button>
           </div>
         </div>
+      ) : creditsLoading ? (
+        <div className="my-28 flex flex-col max-w-3xl mx-auto gap-y-6">
+          <p className="text-center text-2xl sm:text-3xl font-[600] text-[#007aff]">
+            Loading credits...
+          </p>
+        </div>
+      ) : credits === null ? (
+        <div className="my-28 flex flex-col max-w-3xl mx-auto gap-y-6">
+          <p className="text-center text-2xl sm:text-3xl font-[600] text-[#007aff]">
+            Maintenance is going on
+          </p>
+        </div>
       ) : credits === 0 ? (
         <div className="my-28 flex flex-col max-w-3xl mx-auto gap-y-6">
           <p className="text-center text-2xl sm:text-3xl font-[600] text-[#007aff]">
@@ -111,12 +127,12 @@ export default function Dashboard() {
             className="w-full p-4"
             placeholder="Describe what you want to generate..."
             value={prompt}
-            disabled={isLoading}
+            disabled={isLoading || creditsLoading}
             onChange={(e) => setPrompt(e.target.value)}
           />
           <Button
             className="w-[239px] h-[55px] rounded-[50px] my-5"
-            disabled={isLoading}
+            disabled={isLoading || creditsLoading}
             type="submit"
           >
             {isLoading ? (
