@@ -24,7 +24,10 @@ export async function PATCH(request) {
       );
     }
     if (plan === "Basic") {
-      await userModel.updateOne({ user_id: user_id }, { $set: { token: 100 } });
+      await userModel.updateOne(
+        { user_id: user_id },
+        { $set: { token: user.token + 100 } }
+      );
       return NextResponse.json(
         {
           message: "updated credits",
@@ -32,7 +35,10 @@ export async function PATCH(request) {
         { status: 200 }
       );
     } else if (plan === "Advanced") {
-      await userModel.updateOne({ user_id: user_id }, { $set: { token: 500 } });
+      await userModel.updateOne(
+        { user_id: user_id },
+        { $set: { token: user.token + 500 } }
+      );
       return NextResponse.json(
         {
           message: "updated credits",
@@ -42,7 +48,7 @@ export async function PATCH(request) {
     } else if (plan === "Enterprise") {
       await userModel.updateOne(
         { user_id: user_id },
-        { $set: { token: 5000 } }
+        { $set: { token: user.token + 5000 } }
       );
       return NextResponse.json(
         {
