@@ -40,7 +40,10 @@ export default function Subscription({ plan, price }) {
     setIsProcessing(true);
 
     try {
-      const response = await fetch("/api/create-order", { method: "POST" });
+      const response = await fetch("/api/create-order", {
+        method: "POST",
+        body: JSON.stringify({ price: price }),
+      });
       const data = await response.json();
 
       const options = {
