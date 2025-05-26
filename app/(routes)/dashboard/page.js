@@ -8,9 +8,10 @@ import Loading from "@/components/loading";
 import Image from "next/image";
 import { Download } from "lucide-react";
 import { CreditContext } from "@/utils/context/credit-context";
+import Link from "next/link";
 
 export default function Dashboard() {
-  const { fetchCredits } = useContext(CreditContext);
+  const { fetchCredits, credits } = useContext(CreditContext);
   const { user } = useUser();
   const [prompt, setPrompt] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -86,9 +87,21 @@ export default function Dashboard() {
             </Button>
           </div>
         </div>
+      ) : credits === 0 ? (
+        <div className="my-28 flex flex-col max-w-3xl mx-auto gap-y-6">
+          <p className="text-center text-2xl sm:text-3xl font-[600] text-[#007aff]">
+            Ooops! Looks like you have finished your credits 🥲
+          </p>
+          <Link
+            href="/pricing"
+            className="w-full flex justify-center items-center"
+          >
+            <Button variant="outline">Buy More 😁</Button>
+          </Link>
+        </div>
       ) : (
         <form
-          className="my-15 sm:my-32 max-w-xl mx-auto flex flex-col justify-center items-center"
+          className="my-28 max-w-xl mx-auto flex flex-col justify-center items-center"
           onSubmit={(e) => {
             e.preventDefault();
             fetchImage();
