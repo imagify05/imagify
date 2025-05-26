@@ -4,10 +4,12 @@ import { useUser } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import Script from "next/script";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import toast from "react-hot-toast";
+import { CreditContext } from "@/utils/context/credit-context";
 
 export default function Subscription({ plan, price }) {
+  const value = useContext(CreditContext);
   const { user } = useUser();
   const router = useRouter();
   const amount = price;
@@ -30,6 +32,7 @@ export default function Subscription({ plan, price }) {
       }
       const data = await response.json();
       console.log(data.message);
+      value.fetchCredits();
     } catch (error) {
       console.error(error);
       toast.error("Failed to update credits");
