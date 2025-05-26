@@ -71,7 +71,7 @@ export default function Dashboard() {
           <Image
             height={400}
             width={400}
-            className="object-contain object-center"
+            className="object-contain object-center rounded-lg"
             alt="Generated Image"
             src={image}
           />
@@ -127,12 +127,12 @@ export default function Dashboard() {
             className="w-full p-4"
             placeholder="Describe what you want to generate..."
             value={prompt}
-            disabled={isLoading || creditsLoading}
+            disabled={isLoading || creditsLoading || credits === "waiting"}
             onChange={(e) => setPrompt(e.target.value)}
           />
           <Button
             className="w-[239px] h-[55px] rounded-[50px] my-5"
-            disabled={isLoading || creditsLoading}
+            disabled={isLoading || creditsLoading || credits === "waiting"}
             type="submit"
           >
             {isLoading ? (

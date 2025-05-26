@@ -6,7 +6,7 @@ export const CreditContext = createContext();
 
 export default function CreditProvider({ children }) {
   const { user } = useUser();
-  const [credits, setCredits] = useState(0);
+  const [credits, setCredits] = useState("waiting");
   const [isLoading, setIsLoading] = useState(false);
 
   const fetchCredits = async () => {
@@ -34,7 +34,9 @@ export default function CreditProvider({ children }) {
   };
 
   return (
-    <CreditContext.Provider value={{ fetchCredits, isLoading, credits }}>
+    <CreditContext.Provider
+      value={{ fetchCredits, isLoading, credits, setCredits }}
+    >
       {children}
     </CreditContext.Provider>
   );
