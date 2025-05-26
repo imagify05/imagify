@@ -28,7 +28,7 @@ export default function Subscription({ plan, price }) {
         },
       });
       if (!response.ok) {
-        throw new Error(response.status, response.statusText);
+        throw new Error(`Error: ${response.status}, ${response.statusText}`);
       }
       const data = await response.json();
       console.log(data.message);
@@ -41,7 +41,6 @@ export default function Subscription({ plan, price }) {
 
   const handlePayment = async () => {
     setIsProcessing(true);
-
     try {
       const response = await fetch("/api/create-order", {
         method: "POST",

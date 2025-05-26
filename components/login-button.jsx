@@ -19,7 +19,7 @@ export default function LoginButton() {
         },
       });
       if (!response.ok) {
-        throw new Error(response.status, response.statusText);
+        throw new Error(`Error: ${response.status}, ${response.statusText}`);
       } else {
         const data = await response.json();
         console.log(data.message);

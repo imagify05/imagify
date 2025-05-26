@@ -10,7 +10,7 @@ const outfit = Outfit({
 export const metadata = {
   title: "Imagify",
   description:
-    "Unleash your creativity with AI. Turn your imagination into visual art in seconds – just type, and watch the magic happen",
+    "Unleash your creativity with AI. Turn your imagination into visual art in seconds - just type, and watch the magic happen",
 };
 
 export default function RootLayout({ children }) {

@@ -22,7 +22,7 @@ export default function CreditProvider({ children }) {
         },
       });
       if (!response.ok) {
-        throw new Error(response.status, response.statusText);
+        throw new Error(`Error: ${response.status}, ${response.statusText}`);
       }
       const data = await response.json();
       setCredits(data.credits);
