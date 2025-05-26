@@ -29,7 +29,7 @@ export async function POST(request) {
   }
 
   const userId = user_id;
-  const decision = await aj.protect(req, { userId, requested: 5 });
+  const decision = await aj.protect(request, { userId, requested: 5 });
 
   if (decision.isDenied()) {
     return NextResponse.json(
