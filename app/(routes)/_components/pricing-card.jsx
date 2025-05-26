@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
+import Subscription from "./subscription";
 
 const pricingData = [
   {
@@ -53,7 +54,7 @@ export default function PricingCard() {
               /{item.credits} credits
             </span>
           </div>
-          <Button className="w-full">Get Started</Button>
+          <Subscription plan={item.plan} />
         </div>
       ))}
     </div>
