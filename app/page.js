@@ -49,42 +49,42 @@ export default function Home() {
       <section className="max-w-7xl mx-auto my-10 p-4">
         <div className="max-w-[560px] mx-auto flex justify-center items-center flex-wrap gap-4">
           <Image
-            src="https://ik.imagekit.io/txlfejzn5/ChatGPT%20Image%20May%2025,%202025,%2001_25_11%20PM.png?updatedAt=1748159729711"
+            src="https://ik.imagekit.io/8nspakurp/banner.svg?updatedAt=1748253548367"
             height={78}
             width={78}
             alt="previously generated images"
             className="rounded-[6px]"
           />
           <Image
-            src="https://ik.imagekit.io/txlfejzn5/downloaded-image.png?updatedAt=1748159538966"
+            src="https://ik.imagekit.io/8nspakurp/ChatGPT%20Image%20May%2025,%202025,%2001_25_11%20PM%20(1).png?updatedAt=1748253546089"
             height={78}
             width={78}
             alt="previously generated images"
             className="rounded-[6px]"
           />
           <Image
-            src="https://ik.imagekit.io/txlfejzn5/WhatsApp%20Image%202025-05-25%20at%201.09.31%20PM%20(1).jpeg?updatedAt=1748158885544"
+            src="https://ik.imagekit.io/8nspakurp/downloaded-image%20(13).png?updatedAt=1748253526206"
             height={78}
             width={78}
             alt="previously generated images"
             className="rounded-[6px]"
           />
           <Image
-            src="https://ik.imagekit.io/txlfejzn5/WhatsApp%20Image%202025-05-25%20at%201.09.32%20PM.jpeg?updatedAt=1748159478082"
+            src="https://ik.imagekit.io/8nspakurp/WhatsApp%20Image%202025-05-25%20at%201.09.31%20PM%20(1).jpeg?updatedAt=1748253508250"
             height={78}
             width={78}
             alt="previously generated images"
             className="rounded-[6px]"
           />
           <Image
-            src="https://ik.imagekit.io/txlfejzn5/WhatsApp%20Image%202025-05-25%20at%201.09.31%20PM.jpeg?updatedAt=1748158885367"
+            src="https://ik.imagekit.io/8nspakurp/WhatsApp%20Image%202025-05-25%20at%201.09.32%20PM.jpeg?updatedAt=1748253508207"
             height={78}
             width={78}
             alt="previously generated images"
             className="rounded-[6px]"
           />
           <Image
-            src="https://ik.imagekit.io/txlfejzn5/banner.svg?updatedAt=1748159272397"
+            src="https://ik.imagekit.io/8nspakurp/WhatsApp%20Image%202025-05-25%20at%201.09.31%20PM.jpeg?updatedAt=1748253507880"
             height={78}
             width={78}
             alt="previously generated images"
@@ -177,7 +177,7 @@ export default function Home() {
         </div>
         <div className="flex gap-x-1.5 items-center justify-center">
           <Link
-            href="/"
+            href="https://www.instagram.com/imagify05"
             className="h-[35px] w-[35px] flex justify-center items-center rounded-full border-[0.5px] border-[#5e5e5e]"
           >
             <Image
@@ -188,13 +188,13 @@ export default function Home() {
             />
           </Link>
           <Link
-            href="/"
+            href="mailto:imagify05@gmail.com"
             className="h-[35px] w-[35px] flex justify-center items-center rounded-full border-[0.5px] border-[#5e5e5e]"
           >
             <Image src="/gmail.svg" height={15} width={15} alt="gmail logo" />
           </Link>
           <Link
-            href="/"
+            href="https://github.com/imagify05"
             className="h-[35px] w-[35px] flex justify-center items-center rounded-full border-[0.5px] border-[#5e5e5e]"
           >
             <Image src="/github.svg" height={15} width={15} alt="github logo" />
