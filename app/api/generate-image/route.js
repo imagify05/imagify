@@ -1,7 +1,21 @@
+import arcjet, { tokenBucket } from "@arcjet/next";
 import { NextResponse } from "next/server";
 import connectToDb from "@/db/mongodb";
 import { main } from "@/utils/google/ai-image-generation";
 import userModel from "@/models/user.model";
+
+const aj = arcjet({
+  key: process.env.ARCJET_KEY,
+  characteristics: ["userId"],
+  rules: [
+    tokenBucket({
+      mode: "LIVE",
+      refillRate: 5,
+      interval: 5,
+      capacity: 15,
+    }),
+  ],
+});
 
 export async function POST(request) {
   const { user_id, prompt } = await request.json();
@@ -13,6 +27,17 @@ export async function POST(request) {
       { status: 400 }
     );
   }
+
+  const userId = user_id;
+  const decision = await aj.protect(req, { userId, requested: 5 });
+
+  if (decision.isDenied()) {
+    return NextResponse.json(
+      { error: "Too Many Requests", reason: decision.reason },
+      { status: 429 }
+    );
+  }
+
   try {
     await connectToDb();
     const user = await userModel.findOne({ user_id: user_id });
